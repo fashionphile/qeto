@@ -1,6 +1,6 @@
 # Qeto Query Package
 
-*built by DanoDev*
+*built by Fashionphile*
 
 
 ## Purpose
@@ -142,6 +142,8 @@ User::qRelationWhere('order', 'byCity', 'Salt Lake City');
 This would query the `OrderQueries` model you will have had to have created by the function `byCity`.
 
 Contact me:
+
+*Author Dano Gillette* 
 
 https://twitter.com/danodev
 
