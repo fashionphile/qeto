@@ -9,13 +9,13 @@ Single manageable location for creating query where scopes. Originally they were
 ## Basic Use
 First you will want to add the **Qeto\QueryTrait** on any of your table models that you want to query on. This will connect the query to the correct folder structure. Let's say we are using `App\User` and have included the trait. Then add the protected variable `$name` to be the name of the class.
 
-```
+```php
 public $name = 'User';
 ```
 
 That file then connects to a created file (in our case we already have it created)`App\Queries\UserQueries.php`. First you will have to extend in your `App\User` file the `Qeto\BaseQuery` class. Once that has been added you can start to add any query scope you want. Let's add the query `byUsername` that queries the users by the username field.
 
-```
+```php
 use Qeto\BaseQuery;
 
 class UserQueries extends BaseQuery 
@@ -33,14 +33,14 @@ This function allows us to search the users model byUsername. We can pass in the
 
 To call this function we would then invoke the facade and we would use the `qWhereRaw` to get the raw sql along with any function that you need to call as the first parameter and the second parameter is the parameter for the query.
 
-```
+```php
 user::qWhereRaw('byUsername', 'danodev');
 ```
 
 ## Inverses
 We have added inverses that can be used to do the opposite of what you are calling. We originally had two seperate function byUsername and byNotUsername (retrieve the users that don't have that sku). The inverse now let's you establish that in the same call.
 
-```
+```php
 use Qeto\BaseQuery;
 
 class UserQueries extends BaseQuery 
@@ -53,13 +53,14 @@ class UserQueries extends BaseQuery
     }
 }
 ```
+
 Now calling the `qIWhereRaw` function it will get the inverse of the byUsername.
 
 ## Use as eloquent scopes
 
 To use as an eloquent scope you just call the function just as you would a scope, but you won't call the raw version
 
-```
+```php
 User::qWhere('byUsername', 'danodev')->get();
 ```
 
@@ -68,7 +69,7 @@ This allows you to append other scopes and use other eloquent methods with it.
 ## Making sub folders
 Adding all queries to one file would make for a very bloated class. So you can add child classes off the main one within a file that is namespaced after the parent. For example, let's say we want to move the user types to their own file they are a child of the user class. So you would make a `App\Queries\User` folder and create a new file `userTypeQueries.php` with a same named class and extending the UserQueries class. So now let's say we move the `byUsername` function over to the UserTypeQueries class. To call that class you put the name of the file as the first part of the camel cased function you declare in the qWhere.
 
-```
+```php
 User::qWhere('typeByUsername', 'danodev')->get();
 ```
 
@@ -77,7 +78,7 @@ If you find yourself making a group of queries together often you can join them 
 
 The syntax in the joinByAnd is that you pass in the name of methods you want to call. It then takes the parameters that you pass in the form of an array for each parameter that is needed.
 
-```
+```php
 use Qeto\BaseQuery;
 
 class UserQueries extends BaseQuery 
@@ -117,7 +118,7 @@ class UserQueries extends BaseQuery
 
 You would then call `getTypesBetweenDate`:
 
-```
+```php
 $parameters = [
     'pro',
     [
@@ -135,7 +136,7 @@ This would pass each parameter to the specific functions and return them.
 
 To call a relation method you just pass the relation name as the first parameter on the query `qRelationWhere` as an eloquent scope.
 
-```
+```php
 User::qRelationWhere('order', 'byCity', 'Salt Lake City');
 ```
 
