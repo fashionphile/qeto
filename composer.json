@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Query builder for models and entities.",
     "keywords": ["laravel","queries","scopes","php","eloquent"],
-    "homepage": "http://fashionphile.com",
+    "homepage": "https://fashionphile.com",
     "require": {
         "php": "^7.1"
     },
