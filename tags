@@ -1,0 +1,65 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/3fdf28b/
+0	composer.json	/^        {$/;"	o	array:authors
+0	composer.json	/^    "keywords": ["laravel","queries","scopes","php","eloquent"],$/;"	s	array:keywords
+1	composer.json	/^    "keywords": ["laravel","queries","scopes","php","eloquent"],$/;"	s	array:keywords
+2	composer.json	/^    "keywords": ["laravel","queries","scopes","php","eloquent"],$/;"	s	array:keywords
+3	composer.json	/^    "keywords": ["laravel","queries","scopes","php","eloquent"],$/;"	s	array:keywords
+4	composer.json	/^    "keywords": ["laravel","queries","scopes","php","eloquent"],$/;"	s	array:keywords
+BaseQuery	src/BaseQuery.php	/^class BaseQuery$/;"	c	namespace:Qeto
+Basic Use	README.md	/^## Basic Use$/;"	s
+Inverses	README.md	/^## Inverses$/;"	s
+Joining queries and make Or Where statements.	README.md	/^# Joining queries and make Or Where statements.$/;"	c
+Making sub folders	README.md	/^## Making sub folders$/;"	s
+Purpose	README.md	/^## Purpose$/;"	s
+Qeto	src/BaseQuery.php	/^namespace Qeto;$/;"	n
+Qeto	src/QueryCaller.php	/^namespace Qeto;$/;"	n
+Qeto	src/QueryTrait.php	/^namespace Qeto;$/;"	n
+Qeto Query Package	README.md	/^# Qeto Query Package$/;"	c
+Qeto\\\\	composer.json	/^            "Qeto\\\\": "src\/"$/;"	s	object:autoload.psr-4
+QueryCaller	src/QueryCaller.php	/^class QueryCaller$/;"	c	namespace:Qeto
+QueryCaller	src/QueryTrait.php	/^use Qeto\\QueryCaller;$/;"	a	namespace:Qeto	typeref:unknown:Qeto\\QueryCaller
+QueryTrait	src/QueryTrait.php	/^trait QueryTrait$/;"	t	namespace:Qeto
+Relation Methods	README.md	/^# Relation Methods$/;"	c
+Use as eloquent scopes	README.md	/^## Use as eloquent scopes$/;"	s
+__construct	src/QueryCaller.php	/^    public function __construct($queryModel)$/;"	f	class:Qeto\\QueryCaller
+authors	composer.json	/^    "authors": [$/;"	a
+autoload	composer.json	/^    "autoload": {$/;"	o
+call	src/QueryCaller.php	/^    public function call(string $name, $parameter): array$/;"	f	class:Qeto\\QueryCaller	typeref:unknown:array
+checkForSubClass	src/QueryCaller.php	/^    private function checkForSubClass(string $possibleName)$/;"	f	class:Qeto\\QueryCaller
+description	composer.json	/^    "description": "Query builder for models and entities.",$/;"	s
+email	composer.json	/^            "email": "dgillette25@gmail.com",$/;"	s	object:authors.0
+functionName	src/QueryCaller.php	/^    protected $functionName = '';$/;"	v	class:Qeto\\QueryCaller
+getQModel	src/QueryCaller.php	/^    private function getQModel(string $name)$/;"	f	class:Qeto\\QueryCaller
+getQueryGenerator	src/QueryTrait.php	/^    protected static function getQueryGenerator($relation = '')$/;"	f	trait:Qeto\\QueryTrait
+homepage	composer.json	/^            "homepage": "http:\/\/danogillette.com",$/;"	s	object:authors.0
+homepage	composer.json	/^    "homepage": "https:\/\/fashionphile.com",$/;"	s
+inverse	src/BaseQuery.php	/^    public $inverse = false;$/;"	v	class:Qeto\\BaseQuery
+isInverse	src/BaseQuery.php	/^    public function isInverse(bool $inverse): void$/;"	f	class:Qeto\\BaseQuery	typeref:unknown:void
+joinByAnd	src/BaseQuery.php	/^    public function joinByAnd(array $queries, array $parameters = []): array$/;"	f	class:Qeto\\BaseQuery	typeref:unknown:array
+keywords	composer.json	/^    "keywords": ["laravel","queries","scopes","php","eloquent"],$/;"	a
+laravel/framework	composer.json	/^        "laravel\/framework": "Makes use of the laravel eloquent scopes."$/;"	s	object:suggest
+methodParams	src/BaseQuery.php	/^    private function methodParams(string $method, array $parameters)$/;"	f	class:Qeto\\BaseQuery
+name	composer.json	/^            "name": "Dano Gillette",$/;"	s	object:authors.0
+name	composer.json	/^    "name": "fashionphile\/qeto",$/;"	s
+name	src/BaseQuery.php	/^    public $name;$/;"	v	class:Qeto\\BaseQuery
+orWhereQueries	src/BaseQuery.php	/^    public function orWhereQueries(array $queries, array $parameters = []): array$/;"	f	class:Qeto\\BaseQuery	typeref:unknown:array
+php	composer.json	/^        "php": "^7.1"$/;"	s	object:require
+psr-4	composer.json	/^        "psr-4": {$/;"	o	object:autoload
+qIRelationWhereRaw	src/QueryTrait.php	/^    public static function qIRelationWhereRaw(string $relation, string $name, $parameter = ''): /;"	f	trait:Qeto\\QueryTrait	typeref:unknown:array
+qIWhereRaw	src/QueryTrait.php	/^    public static function qIWhereRaw(string $name, $parameter = ''): array$/;"	f	trait:Qeto\\QueryTrait	typeref:unknown:array
+qRelationWhereRaw	src/QueryTrait.php	/^    public static function qRelationWhereRaw(string $relation, string $name, $parameter = ''): a/;"	f	trait:Qeto\\QueryTrait	typeref:unknown:array
+qWhereRaw	src/QueryTrait.php	/^    public static function qWhereRaw(string $name, $parameter = ''): array$/;"	f	trait:Qeto\\QueryTrait	typeref:unknown:array
+queryModel	src/QueryCaller.php	/^    protected $queryModel;$/;"	v	class:Qeto\\QueryCaller
+require	composer.json	/^    "require": {$/;"	o
+role	composer.json	/^            "role": "Senior Developer"$/;"	s	object:authors.0
+scopeQIWhere	src/QueryTrait.php	/^    public function scopeQIWhere($query, string $name, $parameter = '')$/;"	f	trait:Qeto\\QueryTrait
+scopeQWhere	src/QueryTrait.php	/^    public function scopeQWhere($query, string $name, $parameter = '')$/;"	f	trait:Qeto\\QueryTrait
+setQueryModel	src/QueryCaller.php	/^    private function setQueryModel($queryModel): void$/;"	f	class:Qeto\\QueryCaller	typeref:unknown:void
+suggest	composer.json	/^    "suggest": {$/;"	o
+type	composer.json	/^    "type": "library",$/;"	s
